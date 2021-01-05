@@ -119,5 +119,3 @@ Install the [DataPlicity](https://www.dataplicity.com) client and connect to you
 
 #### Fancy Images By  ####
 [http://asciiflow.com/](http://asciiflow.com/)
-# raspberrypi
-# raspberrypi
