@@ -44,7 +44,7 @@ Keep in mind despite how the picture may look, both of those pi's are actually o
 
 
 ## A word on Pi hole and Speed.
-I'm also striving for speed -- For another boost, Pi hole is doing a nice job by blocking almost 40% of DNS queries, which arefor Ad Networks:
+I'm also striving for speed -- For another boost, Pi hole is doing a nice job by blocking almost 40% of DNS queries, which are for Ad Networks:
 ![pi-hole](pi-hole.png)
 
 
