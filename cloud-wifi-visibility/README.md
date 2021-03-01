@@ -34,7 +34,8 @@ Most Wi-Fi clients on Android or iOS fell very gracefully over to whatever pre s
 
 Finally each of the networks have extenders as there is a bit of an awkward shape to the location where these devices are --  there are closed doors at times as well. Humans tend to sit in front of couches and not the line of sight of the wifi...
 
-Pi hole is doing a nice job in speeding up my network by blocking a lot of Ad Networks:
+Pi hole is doing a nice job in speeding up my network by blocking almost 40% of DNS queries, which
+are Ad Networks:
 ![pi-hole](pi-hole.png)
 
 ## A word on DNS and DNSmasq
