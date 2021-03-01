@@ -23,8 +23,16 @@ If you refer to the diagram you can see that the WAN port of the Tp-Link AX50 is
 
 Considering that CPU of the device is significantly upgraded (dual core), it was worth it for me to do this. Also it is WiFi 6 capable so, has the future in mind. More Details here: https://dongknows.com/tp-link-archer-ax50-review/
 
-## A word on Pi hole and the overall setup.
-As you can see in the diagram , I am using two Raspberry Pi's. That's not needed -- the reason I am doing this is for the sake of redundancy. If one pi were to go down I could fail Services over to the other or do physical swap, depending on the damage. That being the case I'm also striving for additional speed here -- I'm taking the second Raspberry Pi and making it the primary DNS recursive resolver, where is the first Raspberry Pi a is primarily doing IP NAT  and routing, but also listed as the second DNS resolver for the clients.
+## A word on Pi hole and Redundancy.
+As you can see in the diagram , I am using two Raspberry Pi's. That's not needed -- the reason I am doing this is for the sake of redundancy. If one pi were to go down I could fail Services over to the other or do a physical swap, depending on the damage. 
+
+That being the case I'm also striving for additional speed here -- I'm taking the second Raspberry Pi and making it the primary DNS recursive resolver, where is the first Raspberry Pi a is primarily doing IP NAT  and routing, but also listed as the second DNS resolver for the clients. DNS is easy to achieve redundancy, IPtables is a physical swap :).
+
+I also am using hostapd on the second Raspberry Pi to offer a Wi-Fi SID/ESS should the Wi-Fi capabilities of the AX50 fail. In my experience that is a certainty about ten thousand times more likely than the actual physical device or the ethernet components failing.  The performance of hostapd on the second pi is less than the ax50 but it's better than nothing for sure. 
+
+Most Wi-Fi clients on Android or iOS fell very gracefully over to whatever pre setup wif network is still available --  I have set that up on each of the clients.
+
+
 
 Pi hole is doing a nice job in speeding up my network by blocking a lot of Ad Networks:
 ![pi-hole](pi-hole.png)
