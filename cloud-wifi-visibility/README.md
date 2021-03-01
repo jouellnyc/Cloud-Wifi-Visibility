@@ -72,8 +72,8 @@ If you'd like to pursue that anyway I would suggest:
 
 ## A word on Fluentd.
 - Use it. :) -- it's current and easy to use. --  https://www.fluentd.org/
-![fluentd.png](fluentd.png)
 - rsyslogd was not very easy in the end to use -- an open TLS bug made me sour on it.
+![fluentd.png](fluentd.png)
 
 ## A word on Suricata.
 - Multi threaded IDS -- runs on pi's --  https://suricata-ids.org/
