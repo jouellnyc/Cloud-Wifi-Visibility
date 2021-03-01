@@ -77,7 +77,8 @@ If you'd like to pursue that anyway I would suggest:
 
 ## A word on Suricata.
 - Multi threaded IDS -- runs on pi's --  https://suricata-ids.org/
-- Easy to install -- make sure to use https://github.com/OISF/suricata-update 
+- You can choose another IDS but it's easy to install 
+- Make sure to use https://github.com/OISF/suricata-update to ease admin of the rulesets if you do
 ![suricata.png](images/suricata.png)
 
 
