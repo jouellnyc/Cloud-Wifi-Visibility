@@ -62,7 +62,12 @@ More Details:
 ## A word on Hostapd.
 My strongest recommendation here is not to configure hostapd at all --  it was a extreme pain to match up the capabilities of that with the hardware that I purchased and  figure out what channels are actually supported on the device. Lots of time in forums and emailing vendors. 
 
-If you'd like to pursue that anyway I would suggest doing a lot of the research up front before you make a purchase. I used a BrosTrend 1200Mbps Linux USB WiFi Adapter -- https://www.amazon.com/gp/product/B07FCN6WGX/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1 
+If you'd like to pursue that anyway I would suggest:
+
+- Doing a lot of the research up front before you make a purchase. I used a BrosTrend 1200Mbps Linux USB WiFi Adapter -- https://www.amazon.com/gp/product/B07FCN6WGX/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1 
+
+- Use Raspap -- https://github.com/RaspAP/raspap-webgui
+![raspap.png](raspap.png)
 
 ## A word on Fluentd.
 Use it. :) -- it's current and easy to use.
