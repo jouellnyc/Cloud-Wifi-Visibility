@@ -30,6 +30,7 @@ As you can see in the diagram , I am using two Raspberry Pi's. That's not needed
 - For DNS, I'm taking the second Raspberry Pi (B) and making it the primary DNS recursive resolver, where the first Raspberry Pi (A) is primarily doing IP NAT and routing, but also listed as the second DNS resolver for the clients. DNS is easy to achieve redundancy, IPtables is a physical swap :).
 
 - For Wifi, I also am using hostapd on the second Raspberry Pi to offer a Wi-Fi SID/ESS should the Wi-Fi capabilities of the AX50 fail. In my experience that is a certainty about ten thousand times more likely than the actual physical device or the ethernet components failing.  The performance of hostapd on the second pi is less than the AX50 but it's still very good and better than nothing for sure. 
+
 Most Wi-Fi clients on Android or iOS fell very gracefully over to whatever pre setup wif network is still available --  I have set that up on each of the clients.
 Each of the networks have extenders as there is a bit of an awkward shape to the location where these devices are --  there are closed doors at times as well. Humans tend to sit in front of couches and not the line of sight of the wifi...
 
