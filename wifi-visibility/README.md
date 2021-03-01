@@ -9,3 +9,5 @@ First here’s a picture of my final config:
 ![Final Config](final_config.png)
 
 
+## Requirements
+Cloud Logger and Rasberry Pi
