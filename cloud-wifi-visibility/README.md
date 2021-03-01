@@ -8,15 +8,15 @@ In this case I am using Tp-Link AX50. With a couple of tweaks -- I was able to s
 
 
 Here’s a picture of the final config:
-![Final Config](final_config.png)
+![Final Config](images/final_config.png)
 
 Let's see how it looks in Loggly:
-![Loggly](loggly.png)
+![Loggly](images/loggly.png)
 
 
 What's important to keep in mind here is that you can see that there are various internal Source IP addresses -- they are all different --  those represent different devices on my local lan.  Without this setup they would all be the external IP of the Wifi/Router as assigned by the ISP -- because that's what Surciata 'sees'.  Now -- on rasberry pi A -- Suricata sees the traffic before it is NAT'ed -- so the internal IPs are preserved. Fluentd then sends to Loggly.
 
-![NAT'ed Client](loggly2.png)
+![NAT'ed Client](images/loggly2.png)
 
 ## What is the main key configuration that allows the visibility to happen?
 If you refer to the diagram you can see that the WAN port of the Tp-Link AX50 is not used. We are completely bypassing the device's ability to use NAT (and all its fancy QoS and magic anti-virus features) and simply using it's Wi-Fi capabilities and its ethernet switch capabilities. 
@@ -36,7 +36,7 @@ Each of the networks have extenders as there is a bit of an awkward shape to the
 
 - For DHCP, each of the raspberry pi's are running a copy of dnsmasq and providing DHCP services. Their log files are easily consumed by Fluentd, so can then be shipped to Loggly. Not the case for the AX50, which is no longer providing DHCP anymore:
 
-![ax50-dhcp.png](ax50-dhcp.png)
+![ax50-dhcp.png](images/ax50-dhcp.png)
 
 Keep in mind despite how the picture may look, both of those pi's are actually on the same physical ethernet switch of the ax 50 -- so they can provide DHCP services for either Wi-Fi network.
 
@@ -45,7 +45,7 @@ Keep in mind despite how the picture may look, both of those pi's are actually o
 
 ## A word on Pi hole and Speed.
 I'm also striving for speed -- For another boost, Pi hole is doing a nice job by blocking almost 40% of DNS queries, which are for Ad Networks:
-![pi-hole](pi-hole.png)
+![pi-hole](images/pi-hole.png)
 
 
 ## A word on DNS and DNSmasq
@@ -55,7 +55,7 @@ More Details:
 - https://dnscrypt.info/faq/
 - https://docs.pi-hole.net/ftldns/dns-resolver/
 
-![pi-hole-dns.png](pi-hole-dns.png)
+![pi-hole-dns.png](images/pi-hole-dns.png)
 
 
 ## A word on Hostapd.
@@ -67,18 +67,18 @@ If you'd like to pursue that anyway I would suggest:
 
 - Use Raspap -- https://github.com/RaspAP/raspap-webgui
 
-![raspap.png](raspap.png)
+![raspap.png](images/raspap.png)
 
 ## A word on Fluentd.
 - Use it. :) -- it's current and easy to use. --  https://www.fluentd.org/
 - rsyslogd was not very easy in the end to use -- an open TLS bug made me sour on it.
 
-![fluentd.png](fluentd.png)
+![fluentd.png](images/fluentd.png)
 
 ## A word on Suricata.
 - Multi threaded IDS -- runs on pi's --  https://suricata-ids.org/
 - Easy to install -- make sure to use https://github.com/OISF/suricata-update 
-![suricata.png](suricata.png)
+![suricata.png](images/suricata.png)
 
 
 ## Requirements
