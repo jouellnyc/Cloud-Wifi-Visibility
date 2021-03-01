@@ -71,13 +71,11 @@ If you'd like to pursue that anyway I would suggest:
 ![raspap.png](raspap.png)
 
 ## A word on Fluentd.
-Use it. :) -- it's current and easy to use.
-
-https://www.fluentd.org/
+Use it. :) -- it's current and easy to use. --  https://www.fluentd.org/
 ![fluentd.png](fluentd.png)
 
 rsyslogd was not very easy in the end to use -- an open TLS bug made me sour on it.
 
 
 ## Requirements
-Cloud Logger and Rasberry Pi
+Cloud Logger (like Loggly or Logio, etc)  and at least one Rasberry Pi
