@@ -57,7 +57,7 @@ More Details:
 - https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html
 
 ![pi-hole-dns.png](images/pi-hole-dns.png)
-![dnsmasq.png](images/dnsmasq.png)
+#![dnsmasq.png](images/dnsmasq.png)
 
 
 ## A word on Hostapd.
