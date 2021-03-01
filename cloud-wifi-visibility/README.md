@@ -27,21 +27,19 @@ Considering that CPU of the device is significantly upgraded (dual core), it was
 
 As you can see in the diagram , I am using two Raspberry Pi's. That's not needed -- the reason I am doing this is for the sake of redundancy. If one pi were to go down I could fail Services over to the other or do a physical swap, depending on the damage. 
 
-For DNS, I'm taking the second Raspberry Pi (B) and making it the primary DNS recursive resolver, where the first Raspberry Pi (A) is primarily doing IP NAT and routing, but also listed as the second DNS resolver for the clients. DNS is easy to achieve redundancy, IPtables is a physical swap :).
+- For DNS, I'm taking the second Raspberry Pi (B) and making it the primary DNS recursive resolver, where the first Raspberry Pi (A) is primarily doing IP NAT and routing, but also listed as the second DNS resolver for the clients. DNS is easy to achieve redundancy, IPtables is a physical swap :).
 
-For Wifi, I also am using hostapd on the second Raspberry Pi to offer a Wi-Fi SID/ESS should the Wi-Fi capabilities of the AX50 fail. In my experience that is a certainty about ten thousand times more likely than the actual physical device or the ethernet components failing.  The performance of hostapd on the second pi is less than the AX50 but it's still very good and better than nothing for sure. 
+- For Wifi, I also am using hostapd on the second Raspberry Pi to offer a Wi-Fi SID/ESS should the Wi-Fi capabilities of the AX50 fail. In my experience that is a certainty about ten thousand times more likely than the actual physical device or the ethernet components failing.  The performance of hostapd on the second pi is less than the AX50 but it's still very good and better than nothing for sure. 
 
 Most Wi-Fi clients on Android or iOS fell very gracefully over to whatever pre setup wif network is still available --  I have set that up on each of the clients.
 
 Each of the networks have extenders as there is a bit of an awkward shape to the location where these devices are --  there are closed doors at times as well. Humans tend to sit in front of couches and not the line of sight of the wifi...
 
-
-For DHCP, each of the raspberry pi's are running a copy of dnsmasq and providing DHCP services. Their log files are easily consumed by Fluentd, so can then be shipped to Loggly. Not the case for the AX50, which is no longer providing DHCP anymore. 
+- For DHCP, each of the raspberry pi's are running a copy of dnsmasq and providing DHCP services. Their log files are easily consumed by Fluentd, so can then be shipped to Loggly. Not the case for the AX50, which is no longer providing DHCP anymore. 
 
 Keep in mind despite how the picture may look, both of those pi's are actually on the same physical ethernet switch of the ax 50 -- so they can provide DHCP services for either Wi-Fi network.
 
-
-Finally, Yes I really did purchase a 75 foot cable in case of a disaster / wifi outage -- however the cats are proving to be formidable physical attackers!
+- Finally, Yes I really did purchase a 75 foot cable in case of a disaster / wifi outage -- however the cats are proving to be formidable physical attackers!
 
 
 ## A word on Pi hole and Speed.
