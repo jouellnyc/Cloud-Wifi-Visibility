@@ -38,6 +38,10 @@ Pi hole is doing a nice job in speeding up my network by blocking a lot of Ad Ne
 ![pi-hole](pi-hole.png)
 
 ## A word on DNS and DNSmasq
+We are forwarding the inbound DNS traffic to a locally running  dnscrypt-proxy on port 5053 and then sending that out towards Quad9 --  https://www.quad9.net/:
+![pi-hole-dns.png](pi-hole-dns.png)
+
+More details here on how Pihole uses DNS: https://docs.pi-hole.net/ftldns/dns-resolver/
 
 ## A word on Hostapd.
 My strongest recommendation here is not to configure hostapd at all --  it was a extreme pain to match up the capabilities of that with the hardware that I purchased and  figure out what channels are actually supported on the device. Lots of time in forums... If you'd like to pursue that anyway I would suggest doing a lot of the research up front before you make a purchase. I used a BrosTrend 1200Mbps Linux USB WiFi Adapter -- https://www.amazon.com/gp/product/B07FCN6WGX/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1 
