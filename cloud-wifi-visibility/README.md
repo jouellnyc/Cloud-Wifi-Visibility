@@ -34,7 +34,8 @@ As you can see in the diagram , I am using two Raspberry Pi's. That's not needed
 Most Wi-Fi clients on Android or iOS fell very gracefully over to whatever pre setup wifi network is available --  I have set that up on each of the clients.
 Each of the networks have extenders as there is a bit of an awkward shape to the location where these devices are --  there are closed doors at times as well. Humans tend to sit in front of couches and not the line of sight of the wifi...
 
-- For DHCP, each of the raspberry pi's are running a copy of dnsmasq and providing DHCP services. Their log files are easily consumed by Fluentd, so can then be shipped to Loggly. Not the case for the AX50, which is no longer providing DHCP anymore. 
+- For DHCP, each of the raspberry pi's are running a copy of dnsmasq and providing DHCP services. Their log files are easily consumed by Fluentd, so can then be shipped to Loggly. Not the case for the AX50, which is no longer providing DHCP anymore:
+![ax50-dhcp.png](ax50-dhcp.png)
 
 Keep in mind despite how the picture may look, both of those pi's are actually on the same physical ethernet switch of the ax 50 -- so they can provide DHCP services for either Wi-Fi network.
 
