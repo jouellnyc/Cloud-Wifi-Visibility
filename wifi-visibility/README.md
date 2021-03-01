@@ -11,6 +11,11 @@ First here’s a picture of my final config:
 Let's see how it looks in Loggly:
 ![Loggly](loggly.png)
 
+
+What's important to keep in mind here is that you can see that there are various internal Source IP addresses -- they are all different --  those represent different devices on my local lan.  Without this setup they would all be the external IP of the Wifi/Router as assigned by the ISP -- because that's what Surciata 'sees'.  Now -- on rasberry pi A -- Suricata sees the traffic before it is Natted -- so the internal IPs are preserved/sent to loggly, and then NATT'ed.
+
+![Natt'ed Client](loggly2.png)
+
 ## What is the main key configuration that allows the visiblity to happen?
 If you refer to the diagram you can see that the wan port of the Tp-Link AX50 is not used. We are completely bypassing the device's ability touse Nat (and all its fancy QoS and magically anti-virus features) and simply using it's Wi-Fi capabilities and its ethernet switch capabilities. Considering that CPU of the device is significantly upgraded (dual core), it was worth it for me to do this. Also it is WiFi six capable sohas the future in mind. More Details here: https://dongknows.com/tp-link-archer-ax50-review/
 
