@@ -1,6 +1,6 @@
 #### Cloud Wifi Visibility 
 
-Recently I was looking to upgrade my security posture on my home Wi-Fi network. Historically it has been very difficult for me to gain full visibility on all of the devices traffic on my network. Using a ![Linux ethernet bridge](https://github.com/jouellnyc/raspberrypi) in front of the Wifi router  I was able to see all the outgoing packets, but I wasn't able to identify precisely from which device it had come from easily - mainly because of the fact the wireless router device was doing NAT and the IDS/Linux Bridgle only saw the external IP of the Router. 
+Recently I was looking to upgrade my security posture on my home Wi-Fi network. Historically it has been very difficult for me to gain full visibility on all of the devices traffic on my network. Using a [Linux ethernet bridge](https://github.com/jouellnyc/raspberrypi) in front of the Wifi router  I was able to see all the outgoing packets, but I wasn't able to identify precisely from which device it had come from easily - mainly because of the fact the wireless router device was doing NAT and the IDS/Linux Bridgle only saw the external IP of the Router. 
 
 This can get really complicated/maybe impossible based on what the manufacturer allows customer to do in terms of configuration -- and there could be many waysto achieve it. This is a medium tolow cost solution that worked to hit my requirements of full device visibilty.
 
