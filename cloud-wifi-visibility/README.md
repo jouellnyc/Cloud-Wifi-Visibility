@@ -34,10 +34,10 @@ Most Wi-Fi clients on Android or iOS fell very gracefully over to whatever pre s
 
 Finally each of the networks have extenders as there is a bit of an awkward shape to the location where these devices are --  there are closed doors at times as well. Humans tend to sit in front of couches and not the line of sight of the wifi...
 
-
-
 Pi hole is doing a nice job in speeding up my network by blocking a lot of Ad Networks:
 ![pi-hole](pi-hole.png)
+
+## A word on DNS and DNSmasq
 
 ## A word on Hostapd.
 My strongest recommendation here is not to configure hostapd at all --  it was a extreme pain to match up the capabilities of that with the hardware that I purchased and  figure out what channels are actually supported on the device. Lots of time in forums... If you'd like to pursue that anyway I would suggest doing a lot of the research up front before you make a purchase. I used a BrosTrend 1200Mbps Linux USB WiFi Adapter -- https://www.amazon.com/gp/product/B07FCN6WGX/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1 
