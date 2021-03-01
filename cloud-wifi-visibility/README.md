@@ -79,7 +79,7 @@ rsyslogd was not very easy in the end to use -- an open TLS bug made me sour on 
 
 ## A word on Suricata.
 Multi threaded IDS --  https://suricata-ids.org/
-
+Easy to install -- make sure to use https://github.com/OISF/suricata-update 
 
 
 ## Requirements
