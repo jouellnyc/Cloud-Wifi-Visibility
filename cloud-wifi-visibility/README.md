@@ -39,6 +39,7 @@ Pi hole is doing a nice job in speeding up my network by blocking a lot of Ad Ne
 
 ## A word on DNS and DNSmasq
 We are forwarding the inbound DNS traffic to a locally running  dnscrypt-proxy on port 5053 and then sending that out towards Quad9 --  https://www.quad9.net/:
+
 ![pi-hole-dns.png](pi-hole-dns.png)
 
 More details here on how Pihole uses DNS: https://docs.pi-hole.net/ftldns/dns-resolver/
