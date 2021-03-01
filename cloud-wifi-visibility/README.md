@@ -77,6 +77,10 @@ Use it. :) -- it's current and easy to use. --  https://www.fluentd.org/
 
 rsyslogd was not very easy in the end to use -- an open TLS bug made me sour on it.
 
+## A word on Suricata.
+Multi threaded IDS --  https://suricata-ids.org/
+
+
 
 ## Requirements
 Cloud Logger (like Loggly or Logio, etc)  and at least one Rasberry Pi
