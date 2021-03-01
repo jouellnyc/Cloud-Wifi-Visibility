@@ -1,8 +1,8 @@
 #### Cloud Wifi Visibility 
 
-Recently I was looking to upgrade my security posture on my home Wi-Fi network. Historically it has been very difficult for me to gain full visibility on all of the devices traffic on my network. Using a [Linux ethernet bridge](https://github.com/jouellnyc/raspberrypi) in front of the Wifi router  I was able to see all the outgoing packets, but I wasn't able to identify precisely from which device it had come from easily - mainly because of the fact the wireless router device was doing NAT and the IDS/Linux Bridgle only saw the external IP of the Router. 
+Recently I was looking to upgrade my security posture on my home Wi-Fi network. Historically it has been very difficult for me to gain full visibility on all of the devices traffic on my network. Using a [Linux ethernet bridge](https://github.com/jouellnyc/raspberrypi) in front of the Wifi router  I was able to see all the outgoing packets, but I wasn't able to identify precisely from which device it had come from easily - mainly because of the fact the wireless router device was doing NAT and the IDS/Linux Bridge only saw the external IP of the Router. 
 
-This can get really complicated/maybe impossible based on what the manufacturer allows customer to do in terms of configuration -- and there could be many waysto achieve it. This is a medium tolow cost solution that worked to hit my requirements of full device visibilty.
+This can get really complicated/maybe impossible based on what the manufacturer allows customer to do in terms of configuration -- and your budget. There could also be other waysto achieve it. This is a medium to low cost solution that worked to hit my requirements of full device visibilty -- add some redundacy as you'll see.
 
 In this case I am using Tp-Link AX50. With a couple of tweaks -- I was able to see all of the traffic, send it to the cloud, and setup an IDS on all the traffic. In addition some other service were setup for redundancy and security but first let's focus on the overall visibility.
 
@@ -37,6 +37,8 @@ Finally each of the networks have extenders as there is a bit of an awkward shap
 Pi hole is doing a nice job in speeding up my network by blocking almost 40% of DNS queries, which
 are for Ad Networks:
 ![pi-hole](pi-hole.png)
+
+Finally, Yes I really did purchase a 75 foot cable in case of a disaster / wifi outage -- however the cats are proving to be a Formidable Physical attackers!
 
 ## A word on DNS and DNSmasq
 We are forwarding the inbound DNS traffic to a locally running  dnscrypt-proxy on port 5053 and then sending that out towards Quad9 -- 9.9.9.9
