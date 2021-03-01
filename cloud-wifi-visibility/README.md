@@ -4,10 +4,10 @@ Recently I was looking to upgrade my security posture on my home Wi-Fi network. 
 
 This can get really complicated/maybe impossible based on what the manufacturer allows customer to do in terms of configuration -- and there could be many waysto achieve it. This is a medium tolow cost solution that worked to hit my requirements of full device visibilty.
 
-In this case I am using Tp-Link AX50. With a couple of tweaks --  I was able to see all of the traffic, send it to the cloud, and setup an IDSon all the traffic. In addition some other service were setup but for now the main piece is focusing on the overall visibility.
+In this case I am using Tp-Link AX50. With a couple of tweaks -- I was able to see all of the traffic, send it to the cloud, and setup an IDS on all the traffic. In addition some other service were setup for redundancy and security but first let's focus on the overall visibility.
 
 
-First here’s a picture of my final config:
+Here’s a picture of the final config:
 ![Final Config](final_config.png)
 
 Let's see how it looks in Loggly:
