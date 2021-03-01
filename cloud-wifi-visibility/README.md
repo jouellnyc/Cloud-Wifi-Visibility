@@ -38,7 +38,7 @@ Pi hole is doing a nice job in speeding up my network by blocking almost 40% of 
 are for Ad Networks:
 ![pi-hole](pi-hole.png)
 
-Finally, Yes I really did purchase a 75 foot cable in case of a disaster / wifi outage -- however the cats are proving to be a Formidable Physical attackers!
+Finally, Yes I really did purchase a 75 foot cable in case of a disaster / wifi outage -- however the cats are proving to be formidable physical attackers!
 
 ## A word on DNS and DNSmasq
 We are forwarding the inbound DNS traffic to a locally running  dnscrypt-proxy on port 5053 and then sending that out towards Quad9 -- 9.9.9.9
