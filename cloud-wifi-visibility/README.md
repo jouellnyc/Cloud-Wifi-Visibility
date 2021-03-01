@@ -54,8 +54,10 @@ We are forwarding the inbound DNS traffic to a locally running  dnscrypt-proxy o
 More Details: 
 - https://dnscrypt.info/faq/
 - https://docs.pi-hole.net/ftldns/dns-resolver/
+- https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html
 
 ![pi-hole-dns.png](images/pi-hole-dns.png)
+![dnsmasq.png](images/dnsmasq.png)
 
 
 ## A word on Hostapd.
