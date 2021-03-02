@@ -18,7 +18,7 @@ Let's see how it looks in Loggly:
 If you refer to the final config diagram above, you can see that the WAN port of the Tp-Link AX50 is not used. We are completely bypassing the device's ability to use NAT (and all its fancy QoS and magic anti-virus features) and are simply using it's Wi-Fi capabilities and its ethernet switch capabilities. 
 
 Now -- on rasberry pi A -- Suricata sees the traffic before it is NAT'ed -- it's listening on internal eth1 so the internal IPs are preserved:
-![suricata](images/suricatb.png)
+![suricata](images/suricatab.png)
 
 ![IPtables](images/iptablesAF.png)
 
