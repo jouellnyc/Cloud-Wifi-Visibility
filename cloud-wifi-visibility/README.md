@@ -25,9 +25,10 @@ af-packet:
   - interface: eth1
 ```
 
+Packets are NAT'ed and sent out on eth0:
+
 ![IPtables](images/iptablesAF.png)
 
-They the are NAT'ed on eth0:
 ![IPtables](images/iptablesAN.png)
 
 Without this setup they would all be showing up as the external IP of the Wifi/Router as assigned by the ISP as described above.
