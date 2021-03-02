@@ -23,7 +23,7 @@ Now -- on rasberry pi A -- Suricata sees the traffic before it is NAT'ed -- on i
 
 They the are NAT'ed on eth0:
 
-![IPtables](images/iptablesAN.png)
+![IPtables](images/iptablesANA.png)
 
 Without this setup they would all be showing up as the external IP of the Wifi/Router as assigned by the ISP as described above.
 Fluentd then sends to Loggly.
