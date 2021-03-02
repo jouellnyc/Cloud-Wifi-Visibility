@@ -51,7 +51,7 @@ Each of the networks have extenders as there is a bit of an awkward shape to the
 
 ![ax50-dhcp.png](images/ax50-dhcp.png)
 
-Keep in mind despite how the picture may look, both of those pi's are actually on the same physical ethernet switch of the ax 50 -- so they can provide DHCP services for either Wi-Fi network.
+Keep in mind despite how the picture may look, both of those pi's are actually on the same physical ethernet switch of the AX50 -- so they can provide DHCP services for either Wi-Fi network.
 
 - Finally, Yes I really did purchase a 75 foot cable in case of a disaster / wifi outage -- however the cats are proving to be formidable physical attackers!
 
