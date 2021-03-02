@@ -15,7 +15,7 @@ Let's see how it looks in Loggly:
 ![NAT'ed Client](images/loggly2.png)
 
 ## What is the main key configuration that allows the visibility to happen?
-If you refer to the diagram you can see that the WAN port of the Tp-Link AX50 is not used. We are completely bypassing the device's ability to use NAT (and all its fancy QoS and magic anti-virus features) and are simply using it's Wi-Fi capabilities and its ethernet switch capabilities. 
+If you refer to the final config diagram above, you can see that the WAN port of the Tp-Link AX50 is not used. We are completely bypassing the device's ability to use NAT (and all its fancy QoS and magic anti-virus features) and are simply using it's Wi-Fi capabilities and its ethernet switch capabilities. 
 
 Now -- on rasberry pi A -- Suricata sees the traffic before it is NAT'ed -- on internal eth1 so the internal IPs are preserved:
 
