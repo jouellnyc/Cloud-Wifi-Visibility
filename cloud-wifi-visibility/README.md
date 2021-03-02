@@ -12,6 +12,7 @@ Here’s a picture of the final config:
 Let's see how it looks in Loggly:
 ![Loggly](images/loggly.png)
 
+Single IPs singled out:
 ![NAT'ed Client](images/loggly2.png)
 
 ## What is the main key configuration that allows the visibility to happen?
