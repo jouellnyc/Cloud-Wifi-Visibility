@@ -97,9 +97,9 @@ If you'd like to pursue that anyway I would suggest:
 
 ## Additional thoughts for the future
 
-Raspberry Pi A is a single point of failure.  The cable modem has more than one ethernet port so it might be possible for me to set up both raspberry pi’s and share some sort of cluster IP -- or do a basic automated failover from one to the other.
+Raspberry Pi A is a single point of failure.  The cable modem has more than one ethernet port so it might be possible to set up both raspberry pi’s and share some sort of cluster IP -- or do a basic automated failover from one to the other.
 
-Also the cable modem is definitely a single point of failure -- I could  purchase another link from an ISP and then have the Raspberry Pi's dual path to both of the respective cable modems. For that matter I could possibly tether from my cell phone.
+ Also the cable modem is definitely a single point of failure -- purchasing another link from an ISP and then have the Raspberry Pi's dual path to both of the respective cable modems would be much better. For that matter one could possibly tether from a cell phone.
 
 Finally, an ansible script would make DR a breeze...
 
