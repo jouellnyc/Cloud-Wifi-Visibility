@@ -22,7 +22,7 @@ More details here: https://dongknows.com/tp-link-archer-ax50-review/
 
 Note that the rasberry pi A is plugged into one of the AX50's LAN ports. Also keep in mind the default gateway for the wifi client is no longer the wifi router now, it's rasberry pi A.
 
-Now -- on rasberry pi A -- Suricata sees the traffic before it is NAT'ed -- it's listening on internal eth1 so the internal IPs are preserved:
+So now -- on rasberry pi A -- Suricata sees the traffic before it is NAT'ed -- it's listening on internal eth1 so the internal IPs are preserved:
 
 ```
 root@raspi4A:~# grep -A 1 "af-packet" /etc/suricata/suricata.yaml
