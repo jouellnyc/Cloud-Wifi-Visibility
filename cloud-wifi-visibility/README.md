@@ -16,7 +16,9 @@ Single IP singled out:
 ![NAT'ed Client](images/loggly2.png)
 
 ## What is the main key configuration that allows the visibility to happen?
-If you refer to the final config diagram above, you can see that the WAN port of the Tp-Link AX50 is not used. We are completely bypassing the device's ability to use NAT (and all its fancy QoS and magic anti-virus features) and are simply using it's Wi-Fi capabilities and its ethernet switch capabilities.  Considering that CPU of the device is significantly upgraded (dual core), it was worth it for me to do this. Also it is WiFi 6 capable so, has the future in mind. More Details here: https://dongknows.com/tp-link-archer-ax50-review/
+If you refer to the final config diagram above, you can see that the WAN port of the Tp-Link AX50 is not used. We are completely bypassing the device's ability to use NAT (and all its fancy QoS and magic anti-virus features) and are simply using it's Wi-Fi capabilities and its ethernet switch capabilities.  Considering that CPU of the device is significantly upgraded (dual core), it was worth it for me to do this. Also it is WiFi 6 capable so, has the future in mind. 
+
+More details here: https://dongknows.com/tp-link-archer-ax50-review/
 
 Note that the rasberry pi A is plugged into one it 's LAN ports. Also keep in mind the default gateway for the wifi client is no longer the wifi router now, it's rasberry pi A.
 
