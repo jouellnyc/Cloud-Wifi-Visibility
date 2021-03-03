@@ -30,7 +30,7 @@ Packets are NAT'ed and sent out on eth0:
 
 ![IPtables](images/iptablesAN.png)
 
-Without this setup they would all be showing up as the external IP of the Wifi/Router as assigned by the ISP as described above.
+Without all this setup internal clients would all be showing up as the external IP of the Wifi/Router as assigned by the ISP as described above.
 Fluentd then sends to Loggly.
 Considering that CPU of the device is significantly upgraded (dual core), it was worth it for me to do this. Also it is WiFi 6 capable so, has the future in mind. More Details here: https://dongknows.com/tp-link-archer-ax50-review/
 
