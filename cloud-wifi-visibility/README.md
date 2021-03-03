@@ -9,7 +9,7 @@ This can get really complicated/maybe impossible/slightly annoying based on what
 Here’s a picture of the final config:
 ![Final Config](images/final_config.png)
 
-Let's see how it looks in Loggly:
+Let's see how the traffic looks in Loggly:
 ![Loggly](images/loggly.png)
 
 Single IP singled out:
