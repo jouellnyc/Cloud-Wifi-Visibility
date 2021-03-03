@@ -95,6 +95,14 @@ If you'd like to pursue that anyway I would suggest:
 - Make sure to use https://github.com/OISF/suricata-update to ease admin of the rulesets if you do
 ![suricata.png](images/suricata.png)
 
+## Additional thoughts for the future
+
+Raspberry Pi A is a single point of failure.  The cable modem has more than one ethernet port so it might be possible for me to set up both raspberry pi’s and share some sort of cluster IP -- or do a basic automated failover from one to the other.
+
+Also the cable modem is definitely a single point of failure -- I could  purchase another link from an ISP and then have the Raspberry Pi's dual path to both of the respective cable modems. For that matter I could possibly tether from my cell phone.
+
+Finally, an ansible script would make DR a breeze...
+
 
 ## Requirements
 Cloud Logger (like Loggly or Logio, etc)  and at least one Rasberry Pi
