@@ -28,8 +28,6 @@ af-packet:
 
 Packets are NAT'ed and sent out on eth0:
 
-![IPtables](images/iptablesAF.png)
-
 ![IPtables](images/iptablesAN.png)
 
 Without this setup they would all be showing up as the external IP of the Wifi/Router as assigned by the ISP as described above.
