@@ -60,6 +60,7 @@ Keep in mind despite how the picture may look, both of those pi's are actually o
 I'm also striving for speed -- For another boost, Pi hole is doing a nice job by blocking almost 40% of DNS queries, which are for Ad Networks:
 ![pi-hole](images/pi-hole.png)
 
+- https://pi-hole.net/
 
 ## A word on DNS and DNSmasq
 We are forwarding the inbound DNS traffic to a locally running  dnscrypt-proxy on port 5053 and then sending that out towards Quad9 -- 9.9.9.9
