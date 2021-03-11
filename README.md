@@ -71,7 +71,6 @@ More Details:
 - https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html
 - https://www.cloudflare.com/learning/dns/dns-over-tls/ 
 - https://www.quad9.net/
-- https://dnscrypt.info/public-servers/
 
 ![pi-hole-dns.png](images/pi-hole-dns.png)
 
