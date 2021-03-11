@@ -36,7 +36,7 @@ Packets are NAT'ed and sent out on eth0:
 
 Without all this setup internal clients would all be showing up as the external IP of the Wifi/Router as assigned by the ISP as described above. 
 
-## A word on Pi hole and Service Redundancy.
+## A word on Service Redundancy.
 
 As you can see in the diagram , I am using two Raspberry Pi's. That's not needed -- the reason I am doing this is for the sake of redundancy. If one pi were to go down I could fail Services over to the other or do a physical swap, depending on the damage. 
 
