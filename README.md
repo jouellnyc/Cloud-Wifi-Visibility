@@ -63,15 +63,15 @@ I'm also striving for speed -- For another boost, Pi hole is doing a nice job by
 - https://pi-hole.net/
 
 ## A word on DNS and DNSmasq
-I considered and tested various DoH,DoT configs -- there's lot to it and it's currently still being tested. For now, the pi-hole is forwarding DNS traffic to a locally running  dnscrypt-proxy on port 5053 and then sending that out. Some common options of compatible servers are Cloudflare, Quad9, or Google. YMMV.
+I considered and tested various DoH,DoT configs -- this is large topic and technically and otherwise - it's being tested on my network. The setup in the picture is pi-hole forwarding DNS traffic to a locally running  dnscrypt-proxy on port 5053 and then sending that out. Some common options of compatible servers are Cloudflare, Quad9, or Google. YMMV.
 
 More Details: 
 - https://dnscrypt.info/faq/
 - https://docs.pi-hole.net/ftldns/dns-resolver/
 - https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html
 - https://www.cloudflare.com/learning/dns/dns-over-tls/ 
-- https://www.quad9.net/
 
+NOTE: Pihole runs a modified version of dnsmasq, but dnsmasq configs on the Pi can basically be treated as native.
 ![pi-hole-dns.png](images/pi-hole-dns.png)
 
 
