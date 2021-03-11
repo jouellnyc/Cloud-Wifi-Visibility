@@ -71,8 +71,9 @@ More Details:
 - https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html
 - https://www.cloudflare.com/learning/dns/dns-over-tls/ 
 
-NOTE: Pihole runs a modified version of dnsmasq, but dnsmasq configs on the Pi can basically be treated as native.
 ![pi-hole-dns.png](images/pi-hole-dns.png)
+
+NOTE: Pihole runs a modified version of dnsmasq, but dnsmasq configs on the Pi can basically be treated as native.
 
 
 ## A word on Hostapd.
