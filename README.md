@@ -4,7 +4,7 @@ Recently I was looking to upgrade my security posture on my home Wi-Fi network. 
 
 I heard good reviews about the [Tp-Link AX50](https://www.tp-link.com/us/home-networking/wifi-router/archer-ax50/), so I set that up. With a couple of tweaks -- I was able to see all of the traffic, send it to the cloud, and setup an IDS on all the traffic, having all the internal IPs on the LAN show up as their unique 192.168.0.X addresses -- so in case of compromise I know what box is the troublemaker. In addition, some other services were setup for redundancy and security but first let's focus on the overall visibility.
 
-This can get really complicated/maybe impossible/slightly annoying based on what the wireless router manufacturer allows customer to do in terms of configuration -- and your budget.  This is a medium to low cost solution that worked to hit my requirements of full device visibilty -- and some redundacy as you'll see. 
+This can get really complicated/maybe impossible/slightly annoying based on what the wireless router manufacturer allows customer to do in terms of configuration -- and your budget.  This is a medium to low cost solution that worked to hit my requirements of full device visibility -- and some redundacy as you'll see. 
 
 Here’s a picture of the final config:
 ![Final Config](images/final_config.png)
