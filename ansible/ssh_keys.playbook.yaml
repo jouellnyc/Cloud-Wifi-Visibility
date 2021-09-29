@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+  - name: 'Set authorized key, removing all the authorized key already set'
+    authorized_key:
+      user: pi
+      key: '{{ item }}'
+      state: present
+      exclusive: True
+    with_file:
+      - ssh/pi_public_key.pem
