@@ -7,7 +7,7 @@ EX_VENDOR = "TP"
 EX_MAC ="22:28:f3"
 
 """ Set your Desired /24 Nets """ 
-networks = ['192.168.0', '10.0.0']
+networks = ['192.168.0.0', '10.0.0.0']
 
 DHCPD_FILE='dhcpd.hosts.stub.tmp'
 HOSTS_FILE='hosts.tmp'
@@ -17,7 +17,7 @@ try:
     fh = open(DHCPD_FILE,'w')
     eh = open(HOSTS_FILE,'w')
 
-    for line in open('host2mac.txt','r'):
+    for line in open('hosts2mac.txt','r'):
 
         if line.startswith('#'):
             continue
@@ -27,7 +27,9 @@ try:
             mac,number,name = line.split(',')
             name = name.strip()
 
-            ip  = one_network + '.' + number
+            quads = one_network.split('.')
+            quads[-1] =  number
+            ip  = '.'.join(quads) 
             sn_pre = one_network.split('.')[0]
 
             fh.write(f"host {name}-{sn_pre} {{\n")
