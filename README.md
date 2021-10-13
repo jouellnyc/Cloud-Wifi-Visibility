@@ -47,7 +47,7 @@ As you can see in the diagram , I am using two Raspberry Pi's. That's not needed
 Most Wi-Fi clients on Android or iOS fail very gracefully over to whatever pre setup wifi network is available --  I have set that up on each of the clients.
 Each of the networks have extenders as there is a bit of an awkward shape to the location where these devices are --  there are closed doors at times as well. Humans tend to sit in front of couches and not the line of sight of the wifi...
 
-- (Updated 10/2021) - For DHCP, each of the raspberry pi's are running a copy of ISC DHCP server (Not Raspberry PI's DHCP). This easily allows the ability to set up static IP reservations and /etc/hosts file on the pi, which make the names of the Devices on the Network show up in the DNS query log instead of just IPS (hint: you really want this). Their log files are easily consumed by Fluentd, so can then be shipped to Loggly. Not the case for the AX50, which is no longer providing DHCP anymore:
+- (Updated 10/2021) - For DHCP, each of the raspberry pi's are running a copy of ISC DHCP server (Not Raspberry PI's DHCP). This easily allows the ability to set up static IP reservations and /etc/hosts file on the pi, which make the names of the Devices on the Network show up in the DNS query log instead of just IPS (hint: you really want this). gen_dhcpd_conf.py  will create all the needed entries in the config. Their log files are easily consumed by Fluentd, so can then be shipped to Loggly. Not the case for the AX50, which is no longer providing DHCP anymore:
 
 ![ax50-dhcp.png](images/ax50-dhcp.png)
 
