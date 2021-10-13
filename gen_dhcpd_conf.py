@@ -17,7 +17,7 @@ try:
     fh = open(DHCPD_FILE,'w')
     eh = open(HOSTS_FILE,'w')
 
-    for line in open('mine.txt','r'):
+    for line in open('host2mac.txt','r'):
 
         if line.startswith('#'):
             continue
