@@ -2,6 +2,9 @@
 
 set -u 
 
+# Put Any IP/Host here you dont want
+# to be overwritten
+
 STATIC_VARS="192.168.0.198   raspi4B
 192.168.0.198   raspi4B"
 
