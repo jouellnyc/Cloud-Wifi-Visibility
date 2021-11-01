@@ -5,6 +5,7 @@
 """ primary source of information - (Name|MAC|last IP octect)               """
 """ Each final entry contains MAC,IP and Name (see template)                """
 
+import sys
 from jinja2 import Template
 
 """ Set your Vendor Prefix """
@@ -19,6 +20,7 @@ networks = ["192.168.0.0", "10.0.0.0"]
 DHCPD_STUB     = "dhcpd.hosts.stub.tmp"
 HOSTS_FILE     = "hosts.tmp"
 DHCPD_TEMPLATE = "dhcpd.template"
+MAC_DB         = "hosts2mac.txt"
 
 def set_jinja(data, fh):
     fh.write(j2_template.render(data) + "\n")
@@ -32,7 +34,7 @@ try:
     dh = open(DHCPD_STUB, "w")
     eh = open(HOSTS_FILE, "w")
 
-    for line in open("hosts2mac.txt", "r"):
+    for line in open(MAC_DB, "r"):
 
         if line.startswith("#"):
             continue
@@ -66,6 +68,10 @@ try:
 
 except OSError as e:
     print(e)
+except ValueError as e:
+    if 'not enough values to unpack' in str(e):
+        print(f"Error: {e}, Did you format {MAC_DB} correctly?") 
+        sys.exit(1)
 finally:
     dh.close()
     eh.close()
