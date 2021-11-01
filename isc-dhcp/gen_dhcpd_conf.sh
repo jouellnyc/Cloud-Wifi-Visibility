@@ -6,7 +6,7 @@ set -u
 # to be overwritten
 
 STATIC_VARS="192.168.0.198   raspi4B
-192.168.0.198   raspi4B"
+192.168.0.199   raspi4A
 127.0.0.1   localhost"
 
 export DHCPD_FILE_REAL='/etc/dhcp/dhcpd.conf'
