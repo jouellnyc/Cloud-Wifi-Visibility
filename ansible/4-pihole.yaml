@@ -1,0 +1,30 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+
+  - name: mkdir -p  /etc/pihole/
+    file:
+      path: /etc/pihole/
+      state: directory
+      mode: '0777'
+      owner: pihole
+      group: www-data 
+    become: yes
+
+  - name: "Copy Pihole Config"
+    vars:
+      user: pi
+    ansible.builtin.copy:
+      src: setupVars.conf
+      dest: /etc/pihole/setupVars.conf
+      mode: '0777'
+      owner: pihole 
+      group: www-data 
+    become: yes
+
+  - name: Install PiHole Unattended
+    #https://discourse.pi-hole.net/t/what-is-setupvars-conf-and-how-do-i-use-it/
+    shell: curl -L https://install.pi-hole.net | bash /dev/stdin --unattended
+    become: yes
+

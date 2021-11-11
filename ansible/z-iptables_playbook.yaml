@@ -1,0 +1,33 @@
+---
+- name: Setup IPTables 
+  hosts: all
+  gather_facts: no
+
+  tasks:
+  - name: Create Directory for IPTables Persistent
+    file:
+      path:  /etc/iptables 
+      state: directory
+      mode: 0644
+    become: yes
+    become_user: root
+    become_method: su
+    become_exe: sudo su
+
+  - name: "Copy IpTables Rules"
+    vars:
+        user: pi 
+    ansible.builtin.copy:
+      src: ./iptables.router.txt
+      owner: root
+      group: root 
+      dest: /etc/iptables/rules.v4 
+      mode: '0644'
+    become: yes
+    become_user: root
+    become_method: su
+    become_exe: sudo su
+
+    #- name: "Iptables Apply"
+    #ansible.builtin.shell:
+    #  cmd: /usr/sbin/iptables-apply -w /tmp/iptables.router.txt

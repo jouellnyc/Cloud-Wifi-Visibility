@@ -1,0 +1,25 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+
+  - name: Update Apt
+    #https://github.com/ansible/ansible/issues/30754
+    #https://forums.raspberrypi.com/viewtopic.php?f=91&t=245022
+    become: yes
+    shell: apt-get update --allow-releaseinfo-change && apt update -y
+
+  - name: Install Software
+    become: yes
+    apt:
+      package: "{{ item }}"
+      state: present
+      update_cache: yes
+    with_items:
+      - ntp
+      - isc-dhcp-server
+      - iptables-persistent
+      - htop
+      - atop
+    tags: software 
+

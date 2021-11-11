@@ -1,0 +1,16 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+
+  - name: Set timezone 
+    become: yes
+    community.general.timezone:
+      name: America/New_York
+      hwclock: local 
+
+  - name: Set Time via NTP
+    #https://askubuntu.com/questions/254826/how-to-force-a-clock-update-using-ntp
+    become: yes
+    shell:  service ntp stop && sudo ntpd -gq && service ntp start
+
