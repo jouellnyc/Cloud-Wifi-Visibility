@@ -18,7 +18,7 @@
     vars:
         user: pi 
     ansible.builtin.copy:
-      src: ./iptables.router.txt
+      src: files/iptables.router.txt
       owner: root
       group: root 
       dest: /etc/iptables/rules.v4 
