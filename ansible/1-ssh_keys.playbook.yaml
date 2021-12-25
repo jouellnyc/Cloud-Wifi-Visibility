@@ -8,4 +8,4 @@
       state: present
       exclusive: True
     with_file:
-      - ssh/pi_public_key.pem
+      - files/pi_public_key.pem
