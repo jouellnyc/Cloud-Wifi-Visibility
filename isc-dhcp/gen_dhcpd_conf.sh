@@ -44,8 +44,8 @@ cp -p $DHCPD_STUB_TMP          $DHCPD_FILE_REAL
 #/etc/hosts
 cp $EH{,.bak}
 echo "$STATIC_VARS"  > $EH
-
-cat $EH_TEMP >> /etc/hosts
+cat  "$EH_TEMP"     >> $EH 
+sort -o $EH{,}
 
 #Bounce DHCPD
 service isc-dhcp-server restart || exit 1
