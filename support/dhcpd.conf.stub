@@ -1,0 +1,40 @@
+# dhcpd.conf
+option domain-name "lan";
+option domain-name-servers 192.168.0.198,192.168.0.199,9.9.9.9;
+default-lease-time 1800;
+max-lease-time 7200;
+ddns-update-style none;
+authoritative;
+log-facility local7;
+
+subnet 10.0.0.0 netmask 255.255.255.0 {
+  authoritative;
+  option routers 10.0.0.1;
+  default-lease-time 1800;
+  max-lease-time 7200;
+  option subnet-mask 255.255.255.0;
+  option broadcast-address 10.0.0.255;
+  option domain-name "lan-10";
+} 
+
+subnet 192.168.0.0 netmask 255.255.255.0 {
+  authoritative;
+  option routers 192.168.0.199;
+  default-lease-time 1800;
+  max-lease-time 7200;
+  option subnet-mask 255.255.255.0;
+  option broadcast-address 192.168.0.255;
+  option domain-name "lan-192";
+} 
+
+host rasp4a {
+     hardware ethernet 3c:8c:f8:ff:8e:00;
+     ignore booting;
+}
+
+host rasp4b {
+     hardware ethernet dc:a6:32:bb:1c:27;
+     ignore booting;
+}
+
+
